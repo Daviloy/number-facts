@@ -1,0 +1,62 @@
+<!Doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/materialize.min.css" />
+        <link rel="stylesheet" href="css/custom.css" />
+        <title>Number Facts App</title>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="brand-logo center">Number Facts</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="row">
+                <form class="col s12" id="fact-form">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="number" placeholder="Enter a number to get a random fact" id="number"/>
+                            <label for="number"></label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12" style="margin: auto;">
+                            <select id="type-select">
+                                <option value="trivia" disabled selected>Select a Category</option>
+                                <option value="trivia">Trivia</option>
+                                <option value="math">Math</option>
+                                <option value="date">Date</option>
+                                <option value="year">Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button type="submit" class="btn btn-large waves-effect waves-light">Get Fact</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="result">
+
+            </div>
+        </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/materialize.min.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('select').formSelect();
+            })
+        </script>
+    </body>
+</html>

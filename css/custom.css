@@ -1,0 +1,11 @@
+nav, .btn, .btn:hover{
+    background-color: #4ac;
+}
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.lead{
+    font-size: 20px;
+}
